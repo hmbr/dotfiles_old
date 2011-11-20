@@ -1,0 +1,21 @@
+multiuser off
+
+#delete key
+termcapinfo xterm-color kD=\E[3~
+
+startup_message off
+bell_msg 'some one is calling you at %n'
+vbell off
+vbell_msg "stranger command"
+
+shell bash
+
+autodetach on
+
+#I have to use iso8859 :-(
+defutf8 off
+encoding ISO8859-15
+
+defscrollback 5000
+
+hardstatus alwayslastline "%5` %{=r .}%-Lw%{= .}%L> %n%h %t %{-}%+Lw%-8=%{= .} %c "

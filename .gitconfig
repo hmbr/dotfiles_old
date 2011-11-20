@@ -1,0 +1,16 @@
+[user]
+	name = hmbr
+	email = helderribas@gmail.com
+#[url "https://<GITUSERNAME>@"]
+#	insteadOf = git://
+#[url "https://<GITUSERNAME>@"]
+#	insteadOf = git://
+
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = true
+[apply]
+	whitespace = fix
