@@ -15,8 +15,9 @@ set smartindent "auto indentacao quando cria uma nova linha
 set hlsearch "colore a busca
 set ignorecase
 set smarttab "adciona espacos em brancos em alguns casos quando usa o tab
-
+set expandtab
 set vb "visual bell
+set autoread " carrega o arquivo se ele tiver atualizacao
 
 filetype on "identifica o tipo de arquivo
 filetype plugin indent on "identacao para o tipo de linguagem
@@ -27,9 +28,9 @@ setlocal omnifunc=syntaxcomplete#Complete
 
 set scrolloff=3 "numero de linhas acima e abaixo do cursor
 set showmatch "mostra as chaves que se completam
-set ttyfast "
+set ttyfast "terminal com conexao rapida
 set backspace=indent,eol,start "altera o comportamento do del
-
+set expandtab
 set laststatus=2 "status line sempre aparece
 
 "set list
