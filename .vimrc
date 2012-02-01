@@ -21,9 +21,10 @@ set autoread " carrega o arquivo se ele tiver atualizacao
 
 filetype on "identifica o tipo de arquivo
 filetype plugin indent on "identacao para o tipo de linguagem
-setlocal omnifunc=syntaxcomplete#Complete
+au FileType python set omnifunc=pythoncomplete#Complete
+inoremap <C-space> <C-x><C-o>
 
-
+setlocal ofu=syntaxcomplete#Complete
 "set encoding=utf-8
 
 set scrolloff=3 "numero de linhas acima e abaixo do cursor
@@ -35,10 +36,12 @@ set laststatus=2 "status line sempre aparece
 
 "set list
 "set listchars=trail:.,tab:>-,eol:<,nbsp:%
-
+let mapleader = ","
+set showcmd
+filetype plugin on
 "pathogen
 call pathogen#infect()
-
+call pathogen#helptags()
 
 let g:user_zen_settings = {
 			\  'indentation' : '  ',
