@@ -34,6 +34,11 @@ set backspace=indent,eol,start "altera o comportamento do del
 set expandtab
 set laststatus=2 "status line sempre aparece
 
+set switchbuf=useopen
+set winwidth=100
+set winheight=25
+
+
 "set list
 "set listchars=trail:.,tab:>-,eol:<,nbsp:%
 let mapleader = ","
