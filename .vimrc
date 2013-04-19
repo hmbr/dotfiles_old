@@ -23,7 +23,7 @@ filetype on "identifica o tipo de arquivo
 filetype plugin indent on "identacao para o tipo de linguagem
 au FileType python set omnifunc=pythoncomplete#Complete
 inoremap <C-space> <C-x><C-o>
-
+set nofoldenable    " disable folding
 setlocal ofu=syntaxcomplete#Complete
 "set encoding=utf-8
 
@@ -31,7 +31,7 @@ set scrolloff=3 "numero de linhas acima e abaixo do cursor
 set showmatch "mostra as chaves que se completam
 set ttyfast "terminal com conexao rapida
 set backspace=indent,eol,start "altera o comportamento do del
-set expandtab
+"set expandtab
 set laststatus=2 "status line sempre aparece
 
 set switchbuf=useopen
@@ -61,4 +61,14 @@ let g:user_zen_settings = {
 			\  }
 			\}
 
-
+"virtualenv
+py << EOF
+import os.path
+import sys
+import vim
+if 'VIRTUAL_ENV' in os.environ:
+        project_base_dir = os.environ['VIRTUAL_ENV']
+        sys.path.insert(0, project_base_dir)
+        activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+        execfile(activate_this, dict(__file__=activate_this))
+EOF
