@@ -1,6 +1,6 @@
 [user]
-	name = hmbr
-	email = helderribas@gmail.com
+	name = name
+	email = email@gmail.com
 #[url "https://<GITUSERNAME>@"]
 #	insteadOf = git://
 #[url "https://<GITUSERNAME>@"]
